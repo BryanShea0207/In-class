@@ -1,4 +1,5 @@
 # In-class
+![alt text](Self_Image.JPG)
 I’ve had a decent amount of experience with computers, I work at a hardware store where I maintain the computers we use for the paint machines. In addition, I have taken many computers related classes: 
 - CS I, II, III
 - a two semester Cisco Certified networking course 
