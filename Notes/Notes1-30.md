@@ -51,4 +51,3 @@ Github actions are a C.I.C.D
             branch: ["main:"]
     means runs on push to main branch
 
-
