@@ -35,3 +35,38 @@ The Vue model knows about itself and the model
 
 Vue can be added to a system piece by piece 
 
+#### Framework vs Library
+
+A Library is a piece of code the provides functionality that an application can use
+
+A Framework is similar to a Library but structures the code 
+
+"You call the code in the Library the Framework calls your code"
+
+Vue has two diffrent versions one for modules one without
+
+const app = createApp({
+    setup() {
+        const notification = ref([
+            'This is a primary notification #1', 
+            'This is a primary notification #2',
+            'This is a primary notification #3',
+            'This is a warning notification #4',
+        ]);
+      
+        const removeNotification = (index) => {
+            notification.value.splice(index, 1);
+        };
+
+        return { notification, removeNotification };
+    }
+})     
+
+{} <= means object
+[] <= means array
+
+Mount means to bind something to a tag
+
+{{ JavaScript }} is output
+
+variables that will be tracked go in a ref
