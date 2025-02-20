@@ -19,10 +19,16 @@ by end of project there is the expectation
 Semver
 semantic versioning
 
-by putting a ~ infront of a version will get you the latest bug fix
+by putting a ~ in front of a version will get you the latest bug fix
 ^ means give me the version number i asked for at least the minor verison specified 
 
 run pnpm i to install the dependencies
 
 There is always a possibility that when you run a program ir uses a package that could be updated without you know 
+
+pnpm dont use -g it will instal as a global 
+
+NodeMon watches file directory on disc for file changes and restarts ifi
+
+
 
