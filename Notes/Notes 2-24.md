@@ -112,3 +112,9 @@ other import type would be "import * as vue from 'vue' " then you would have to 
     ex. vue.createApp() 
 
 ctrl + space to force code completion 
+
+first make the app 
+then use plugins such as router
+then mount the app
+
+Vue must always be composition based
