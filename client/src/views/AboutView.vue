@@ -4,5 +4,4 @@
     <h2>About the best class at New Paltz</h2>
   </div>
 </template>
-
 <style></style>

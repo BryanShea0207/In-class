@@ -1,4 +1,7 @@
 <script setup lang="ts">
+    import { ref } from 'vue';
+    
+    const isActive = ref(false);
 
 </script>
 
@@ -9,7 +12,8 @@
                 <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
             </a> 
 
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                :class="{ 'is-active': isActive }" @click="isActive = !isActive">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -17,7 +21,7 @@
             </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-menu" :class="{ 'is-active': isActive }">
             <div class="navbar-start">
                 <RouterLink to="/" class="navbar-item">Home</RouterLink>
                 <RouterLink to="/about" class="navbar-item">About</RouterLink>

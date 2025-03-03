@@ -14,3 +14,20 @@ router
 
     views
         very similar to componets it is up to the dev how to organize them
+
+### Reading view
+<script setup lang="ts">
+import TheWelcome from '../components/TheWelcome.vue'
+</script>
+
+<template>
+  <main>
+    <TheWelcome />
+  </main>
+</template>
+
+imports TheWelcome component and displays it
+
+when it comes to script tags in SFC a regular script tag can be used or a "setup script tag" 
+
+the slot tag can be used to make component templates to be filled in when used
