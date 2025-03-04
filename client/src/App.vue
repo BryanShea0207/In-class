@@ -2,6 +2,7 @@
 import { RouterView } from 'vue-router'
 import NavBar from '@/components/NavBar.vue'
 import NotificationList from './components/NotificationList.vue';
+import SlidingDrawer from './components/SlidingDrawer.vue';
 </script>
 
 <template>
@@ -13,11 +14,19 @@ import NotificationList from './components/NotificationList.vue';
     <NotificationList />
     <RouterView />
   </div>
+
+  <SlidingDrawer>
+    <ShoppingCart />
+  </SlidingDrawer>
 </template>
 
 <style scoped>
 body {
   background-color: aliceblue;
+}
+
+.body-Container {
+  background-color: white;
 }
 
 </style>
