@@ -1,6 +1,6 @@
 always use ref instead of reactive
 
-with a ref you will have to use .value unless it is in a templet then the compiler will usually handle it
+with a ref you will have to use .value unless it is in a template then the compiler will usually handle it
 
 a ref must be created inside of a setup function
 
@@ -19,7 +19,7 @@ knuxt and next are popular meta frameworks
 
 looking up "File based routing" will lead to the github page for unplugin-vue-router
 
-benifite of using unplugin router:
+benefits of using unplugin router:
 creates index.ts at build time
 
 [[https://uvr.esm.is/introduction.html]]
