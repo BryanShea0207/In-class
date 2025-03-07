@@ -32,3 +32,7 @@ steps:
 5. rename views to pages
 
 avoid renaming a directory then editing sub files
+
+using this allowed for the h1 to change text based on the URL
+
+<h1 class="title">Product {{ $route.params.id }}</h1>
