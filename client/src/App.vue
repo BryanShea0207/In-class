@@ -1,21 +1,25 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { RouterView } from 'vue-router'
 import NavBar from '@/components/NavBar.vue'
-import NotificationList from './components/NotificationList.vue';
-import SlidingDrawer from './components/SlidingDrawer.vue';
+import NotificationList from './components/NotificationList.vue'
+import SlidingDrawer from './components/SlidingDrawer.vue'
+import ShoppingCart from './components/ShoppingCart.vue'
+
+const isShoppingCartOpen = ref(false)
 </script>
 
 <template>
   <header>
-    
-    <NavBar />
+    <NavBar v-model:isShoppingCartOpen="isShoppingCartOpen" />
   </header>
-  <div class="container body-Container">
+
+  <div class="container body-container">
     <NotificationList />
     <RouterView />
   </div>
 
-  <SlidingDrawer>
+  <SlidingDrawer :isOpen="isShoppingCartOpen">
     <ShoppingCart />
   </SlidingDrawer>
 </template>
@@ -28,5 +32,4 @@ body {
 .body-Container {
   background-color: white;
 }
-
 </style>
