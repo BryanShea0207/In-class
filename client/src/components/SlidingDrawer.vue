@@ -16,7 +16,7 @@ const props = defineProps<{
   top: 50;
   bottom: 0;
   left: 0;
-  width: 20rem;
+  width: 30rem;
   background-color: white;
   box-shadow: -1px 0px 7px rgba(0, 0, 0, 0.5);
   transform: translateX(18rem);

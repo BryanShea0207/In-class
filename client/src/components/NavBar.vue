@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-
+import { refCart } from '@/models/cart'
 const isActive = ref(false)
+const cart = refCart()
 
 const props = defineProps<{
   isShoppingCartOpen?: boolean
@@ -60,6 +61,7 @@ const event = defineEmits<{ 'update:isShoppingCartOpen': [boolean] }>()
             @click="event('update:isShoppingCartOpen', !props.isShoppingCartOpen)"
           >
             <i class="fas fa-shopping-cart"></i>
+            <span>{{ cart.length }}</span>
           </button>
         </div>
         <div class="navbar-item">
@@ -75,4 +77,12 @@ const event = defineEmits<{ 'update:isShoppingCartOpen': [boolean] }>()
   </nav>
 </template>
 
-<style scoped></style>
+<style scoped>
+.cart-length {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transform: 50;
+  translate: 50;
+}
+</style>
