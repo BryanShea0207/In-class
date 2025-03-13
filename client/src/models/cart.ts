@@ -1,4 +1,5 @@
 import { ref } from 'vue'
+import { addNotification } from './notification'
 
 const cart = ref<any>([])
 
@@ -8,6 +9,10 @@ export function refCart() {
 
 
 
-function addToCart({ name, price}: any){
+export function addToCart({ name, price}: any){
     cart.value.push({ name, price, quantity: 1})
+    addNotification({
+        message: 'Added to Cart',
+        type: 'success'
+    })
 }
