@@ -23,9 +23,9 @@ const cart = refCart()
           <span> x {{ item.product.price }} </span>
           <span> = {{ item.product.price * item.quantity }} </span>
         </span>
+        <h2 class="is-title-2">Total: ${{ cart.reduce((acc, item)) => acc + item.product.price}}</h2>
       </li>
     </ul>
-    <h2 class="is-title-2">Total: ${{ cart.reduce((acc,item)) => acc + item.product.price}}</h2>
   </div>
 </template>
 
