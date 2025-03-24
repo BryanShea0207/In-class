@@ -4,3 +4,7 @@ GET https://google.com/search?q=new+paltz
 
 ###
 GET https://dummyjson.com/products/
+
+###
+GET http://localhost:8000/products
+
