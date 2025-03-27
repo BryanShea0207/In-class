@@ -32,7 +32,10 @@ router
     .post('/', (req,res) => {
         const { name, price } = req.post
 
-        
+        res.send({
+            id: 4,
+            name
+        })
     })
 
 module.exports = router

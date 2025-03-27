@@ -17,3 +17,37 @@ app.listen(PORT, () => {
 
 console.log('Hello, world!')
 
+/*
+ways to send data to the server
+1.Query parameters: ?name=John&age=30
+2.PATH Parameters: /users/123
+3.request body:
+    1. form data
+    2. JSON data
+4. headers
+    cookies
+*/
+
+/*
+parts of a URL
+1. protocol: http(s)
+2. Domain: www.example.com
+3. Port: :80(http) or :443(https)
+4. Path: /path/to/resource
+5. Query parameters: ?name=John&age=30
+6. Fragment: #section1
+
+example: https://www.example.com:90/path/to/resource?name=John&age=30#section1
+         protocol :// domain : port / paths ? Query # Fragment
+*/
+
+/*
+Module Types
+1. CommonJS: 
+    import: require('module')
+    export: module.exports = { module }
+2. ES6
+    import: import { module } form 'module'
+    export: export { module }
+*/
+
