@@ -34,7 +34,34 @@ router
 
         res.send({
             id: 4,
-            name
+            name,
+            price: 10.99 * id
+        })
+    })
+    .post('/', (req, res) => {
+        const { name, price } = req.body
+
+        res.send({
+            id: 4,
+            name,
+            price
+        })
+    })
+    .patch('/:id', (req, res) => {
+        const { id } = req.params
+        const { name, price } = req.body
+
+        res.send({
+            id,
+            name,
+            price
+        })
+    })
+    .delete('/:id', (req, res) => {
+        const { id } = req.params
+
+        res.send({
+            message: `Product ${id} deleted`
         })
     })
 
