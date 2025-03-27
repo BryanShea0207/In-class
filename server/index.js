@@ -7,7 +7,7 @@ const app = expreess()
 
 app.get('/', (req, res) => {
     res.send('Hello New Paltz, New York')
-}).use('/products', productsController)
+}).use('/api/v1/products', productsController)
 
 //Listen on port 8000, IP defaults to
 //

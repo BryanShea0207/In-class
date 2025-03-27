@@ -21,7 +21,7 @@ router
             }])
     })
     .get('/:id', (req,res) => {
-        const { id } = req.body
+        const { id } = req.params
 
         res.send({
             id,
@@ -32,7 +32,7 @@ router
     .post('/', (req,res) => {
         const { name, price } = req.post
 
-        res.send
+        
     })
 
 module.exports = router
