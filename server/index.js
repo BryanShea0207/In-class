@@ -5,15 +5,43 @@ const PORT = 8000
 
 const app = expreess()
 
-app.get('/', (req, res) => {
-    res.send('Hello New Paltz, New York')
-}).use('/api/v1/products', productsController)
+//Middleware
+//controller 
+app.use(expreess.json())
+app.use(expreess.urlencoded({ extended: true}))
+
+app
+    .get('/', (req, res) => {
+        res.send('Hello New Paltz, New York')
+    })
+    .use('/api/v1/products', productsController)
+
+app
+    .use((err, req, res, next, )=> {
+        console.error(err)
+        const status = err.status || 500
+
+        const error = {
+            status,
+            message: err.message || 'Internal Server Error'
+        }
+        res.status(status).send(error)
+    })
 
 //Listen on port 8000, IP defaults to
 //
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}/`)
-})
+
+});
+
+/*
+    Asynchronous patterns in Node.js
+    1. Callbacks
+    2. Pipeline
+    3. Promises
+    4. Async/Await
+*/
 
 console.log('Hello, world!')
 

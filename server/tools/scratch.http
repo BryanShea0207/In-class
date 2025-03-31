@@ -29,8 +29,7 @@ Content-Type: application/json
 
 ###
 PATCH http://localhost:8000/api/v1/products/1
-Content-Type: 
-
+Content-Type: application/json
 {
-    
+    "price": 150
 }
