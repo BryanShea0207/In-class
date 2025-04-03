@@ -12,10 +12,11 @@ const app = expreess()
 app.use(expreess.json())
 
 app
-    .get('/', (req, res) => {
+    .get('/hello', (req, res) => {
         res.send('Hello New Paltz, New York')
     })
     .use('/api/v1/products', productsController)
+    .use('/', expreess.static('dist'));
 
 app
     .use((err, req, res, next, )=> {
