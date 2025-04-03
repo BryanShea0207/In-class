@@ -2,13 +2,14 @@
 const expreess = require('express')
 const productsController = require('./controllers/products')
 const PORT = 8000
+const e = require('express');
+
 
 const app = expreess()
 
 //Middleware
 //controller 
 app.use(expreess.json())
-app.use(expreess.urlencoded({ extended: true}))
 
 app
     .get('/', (req, res) => {

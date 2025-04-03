@@ -9,7 +9,7 @@ router
             res.send(data)
         }).catch(next) 
     })
-    .get('/:id', (req, res, next) => {
+    .get('/:id', async (req, res, next) => {
         const { id } = req.params
 
         model.get(id).then((data) => [
@@ -33,11 +33,11 @@ router
 
     })
     .delete('/:id', (req, res, next) => {
-        const { id } = data.items.findIndex((item) => item.id == id)
+        const { id } = req.params
 
         model.remove(id).then((data) => {
-
-        }).catch()
+            res.send(data)
+        }).catch(next)
     })
 
 module.exports = router
