@@ -1,6 +1,7 @@
 //Load the http module to create an http server.
 const expreess = require('express')
 const productsController = require('./controllers/products')
+const usersController = require('./controllers/users')
 const PORT = 8000
 const e = require('express');
 
@@ -16,6 +17,7 @@ app
         res.send('Hello New Paltz, New York')
     })
     .use('/api/v1/products', productsController)
+    .use('/api/v1/users', usersController)
     .use('/', expreess.static('dist'));
 
 app
