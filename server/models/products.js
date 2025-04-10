@@ -39,7 +39,7 @@ async function update(id, item){
         ...item
     }
     data.items[index] = updateItem
-    return updatedItem
+    return updateItem
 }
 
 async function remove(id){
