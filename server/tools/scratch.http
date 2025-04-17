@@ -5,7 +5,7 @@
 http://localhost:8000/api/v1/products
 
 ###
-GET http://localhost:8000/api/v1/products/1
+GET http://localhost:8000/api/v1/products/35
 
 ###
 POST http://localhost:8000/api/v1/products
@@ -60,4 +60,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:8000/api/v1/users/1
+DELETE http://localhost:8000/api/v1/users/1params
+
+###
+POST http://localhost:3000/api/v1/products/seed

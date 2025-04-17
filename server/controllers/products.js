@@ -39,5 +39,13 @@ router
             res.send(data)
         }).catch(next)
     })
+    .get('/search/:query', (req,res,next) => {
 
+    })
+    .post('/seed', (req,res,next) => {
+        const {data} = req.body
+
+        
+    }
+    )
 module.exports = router
