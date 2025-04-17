@@ -1,6 +1,6 @@
 const model = require('../models/users')
-const expreess = require('express')
-const router = expreess.Router()
+const express = require('express')
+const router = express.Router()
 
 router
     .get('/', (req, res, next) => {
