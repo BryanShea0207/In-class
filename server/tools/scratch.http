@@ -2,10 +2,10 @@
 
 
 ###
-http://localhost:8000/api/v1/products
+http://localhost:3000/api/v1/products?offset=5&limit=10&sort=price&order=acs
 
 ###
-GET http://localhost:8000/api/v1/products/35
+GET http://localhost:3000/api/v1/products/35
 
 ###
 POST http://localhost:8000/api/v1/products

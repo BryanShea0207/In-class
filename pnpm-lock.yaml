@@ -726,11 +726,14 @@ snapshots:
 
   'in-class@file:':
     dependencies:
+      '@supabase/supabase-js': 2.49.4
       dayjs: 1.11.13
       dotenv: 16.4.7
       express: 5.1.0
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
   inherits@2.0.4: {}
 
