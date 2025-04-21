@@ -1,4 +1,4 @@
-export const API_ROOT = (import.meta.env.VITE_ROOT as string) ?? /api/v
+export const API_ROOT = (import.meta.env.VITE_API_ROOT as string) ?? /api/v
 
 export function rest<T>(url: string): Promise<T> {
     return fetch(url).then((x) => x.json())

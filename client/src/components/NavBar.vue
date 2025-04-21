@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { refCart } from '@/models/cart'
+import LoginBadge from './LoginBadge.vue';
 const isActive = ref(false)
 const cart = refCart()
 
@@ -65,12 +66,7 @@ const event = defineEmits<{ 'update:isShoppingCartOpen': [boolean] }>()
           </button>
         </div>
         <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light"> Log in </a>
-          </div>
+          <LoginBadge />
         </div>
       </div>
     </div>
