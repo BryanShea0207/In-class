@@ -1,5 +1,6 @@
-import products from '@/data/products.json'
+
 import type { DataListEnvelope } from '@/models/dataEnvelopes'
+import { api } from './session';
 export interface ProductReview {
     rating: number;
     comment: string;
@@ -45,18 +46,10 @@ export interface Product {
     thumbnail?: string;
 }
 
-export function getAll() {
-    return products as DataListEnvelope<Product>
+export async function getAll() {
+    return api<DataListEnvelope<Product>>('products')
 }
 
-export function getOne(id: string){
-    return products.items.find((item) => item.id == +id) as Product
+export async function getOne(id: string){
+    return api<Product> ('products/${id}')
 }
-
-getAll().items.push({
-    id: 100,
-    title: 'Test Prpduct',
-    description: 'This is a test product',
-    category: 'Test',
-    price: 0.50
-})
