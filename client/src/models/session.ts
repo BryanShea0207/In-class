@@ -1,6 +1,6 @@
-import * as myFetch from "./myFetch";
-import type { User } from "./users";
-import { ref} from 'vue'
+import { ref } from 'vue'
+import * as myFetch from './myFetch'
+import { get, type User } from './users'
 
 export function api<T>(action: string): Promise<T> {
  return myFetch.api<T>(action)
@@ -20,5 +20,12 @@ export const isAdmin = () => session.value?.user?.role === 'admin'
 export const isLoggedIn = () => session.value?.user !== null
 
 export function login(id: string) {
-    return get(id(id))
+    return get(id).then((user) => {
+      session.value.user = user
+    })
+  }
+  
+export function logout() {
+    session.value.user = null
+    session.value.token = null
 }
