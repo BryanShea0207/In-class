@@ -50,9 +50,9 @@ router
 
     })
     .post('/seed', (req, res, next) => {
-        const { data } = req.body
-
-        model.seed(data).then((data) => {
+        //const { data } = 
+        //console.log(data)
+        model.seed().then((data) => {
             res.status(201).send(data)
         }).catch(next)
     })

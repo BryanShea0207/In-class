@@ -91,6 +91,7 @@ async function seed(){
         if (error) {
             throw error
         }
+
     }
     return { message: 'Seeded successfully' }
 }

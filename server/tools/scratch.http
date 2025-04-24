@@ -65,3 +65,5 @@ DELETE http://localhost:8000/api/v1/users/1params
 ###
 POST http://localhost:3000/api/v1/users/seed
 
+###
+POST http://localhost:3000/api/v1/products/seed
