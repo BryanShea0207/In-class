@@ -1,3 +1,6 @@
+/*  B"H
+*/
+
 const data = require('../data/products.json')
 const { CustomError, statusCodes } = require('./errors')
 const { connect } = require('./supabase')
@@ -32,7 +35,7 @@ async function get(id){
     if (error) {
         throw error
     }
-    return item
+    return item[0]
 }
 
 async function search(query, limit = 30, offset = 0, sort = 'id', order = 'desc'){
@@ -84,6 +87,12 @@ async function remove(id){
 }
 
 async function seed(){
+    const {data: user, error} = await connect().from(TABLE_NAME).insert(insert).select('*')
+    if(error) {
+        throw error
+    }
+    
+
     for (const item of data.items) {
 
         const insert = mapToDB(item)
@@ -123,7 +132,9 @@ function mapToDB(item) {
         shipping_information: item.shippingInformation,
         availability_status: item.availabilityStatus,
         return_policy: item.returnPolicy,
-        minimum_order_quantity: item.minimumOrderQuantity
+        minimum_order_quantity: item.minimumOrderQuantity,
+        thumbnail: item.thumbnail,
+        images: item.images,
     }
 }
 

@@ -51,5 +51,6 @@ export async function getAll() {
 }
 
 export async function getOne(id: string){
-    return api<Product> ('products/${id}')
+    console.log(id)
+    return api<Product> (`products/${id}`)
 }
